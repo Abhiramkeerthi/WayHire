@@ -1,69 +1,195 @@
-.progress-container{
+/* ===========================================
+   PROGRESS TRACKER
+=========================================== */
 
-display:flex;
+.progress-wrapper{
 
-justify-content:center;
+    max-width:1200px;
 
-gap:60px;
+    margin:35px auto 60px;
 
-padding:45px 0;
+    display:flex;
 
-background:white;
+    justify-content:space-between;
 
-border-bottom:1px solid #ececec;
+    align-items:flex-start;
+
+}
+
+.progress-step-wrapper{
+
+    flex:1;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    position:relative;
 
 }
 
 .progress-step{
 
-display:flex;
+    width:58px;
 
-flex-direction:column;
+    height:58px;
 
-align-items:center;
+    border-radius:50%;
 
-gap:10px;
+    display:flex;
 
-color:#9CA3AF;
+    justify-content:center;
 
-font-weight:600;
+    align-items:center;
 
-}
+    background:white;
 
-.progress-icon{
+    border:2px solid #D1D5DB;
 
-width:60px;
+    color:#6B7280;
 
-height:60px;
+    font-size:18px;
 
-border-radius:50%;
+    font-weight:700;
 
-display:flex;
+    transition:.35s;
 
-align-items:center;
-
-justify-content:center;
-
-background:#F3F4F6;
-
-transition:.3s;
+    z-index:2;
 
 }
 
-.active .progress-icon{
+.progress-step:hover{
 
-background:#4F46E5;
-
-color:white;
-
-box-shadow:0 10px 25px rgba(79,70,229,.25);
+    transform:translateY(-3px);
 
 }
 
-.completed .progress-icon{
+.progress-step.active{
 
-background:#10B981;
+    background:linear-gradient(
+        135deg,
+        #4F46E5,
+        #7C3AED
+    );
 
-color:white;
+    color:white;
+
+    border:none;
+
+    box-shadow:0 0 0 6px rgba(79,70,229,.18);
+
+}
+
+.progress-step.done{
+
+    background:#16A34A;
+
+    border:none;
+
+    color:white;
+
+}
+
+.progress-step-wrapper span{
+
+    margin-top:14px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    color:#374151;
+
+    text-align:center;
+
+}
+
+.progress-line{
+
+    position:absolute;
+
+    top:27px;
+
+    left:58%;
+
+    width:calc(100% - 58px);
+
+    height:4px;
+
+    background:#E5E7EB;
+
+    z-index:1;
+
+    transition:.3s;
+
+}
+
+.progress-line.done{
+
+    background:linear-gradient(
+        90deg,
+        #4F46E5,
+        #7C3AED
+    );
+
+}
+
+/* ===========================================
+   RESPONSIVE
+=========================================== */
+
+@media(max-width:900px){
+
+.progress-wrapper{
+
+overflow-x:auto;
+
+gap:35px;
+
+padding-bottom:15px;
+
+}
+
+.progress-step-wrapper{
+
+min-width:120px;
+
+}
+
+.progress-line{
+
+width:80px;
+
+left:70px;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.progress-step{
+
+width:48px;
+
+height:48px;
+
+font-size:16px;
+
+}
+
+.progress-step-wrapper span{
+
+font-size:13px;
+
+}
+
+.progress-line{
+
+top:22px;
+
+}
 
 }

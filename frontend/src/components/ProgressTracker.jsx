@@ -1,70 +1,155 @@
+import { useNavigate } from "react-router-dom";
 import "../styles/progress.css";
-
-import {
-  FileText,
-  BadgeCheck,
-  Route,
-  Bot,
-  ClipboardList
-} from "lucide-react";
 
 function ProgressTracker({ current }) {
 
-  const steps = [
-    {
-      icon: <FileText size={22} />,
-      label: "Resume"
-    },
-    {
-      icon: <BadgeCheck size={22} />,
-      label: "ATS"
-    },
-    {
-      icon: <Route size={22} />,
-      label: "Roadmap"
-    },
-    {
-      icon: <Bot size={22} />,
-      label: "Interview"
-    },
-    {
-      icon: <ClipboardList size={22} />,
-      label: "Report"
-    }
-  ];
+    const navigate = useNavigate();
 
-  return (
+    const steps = [
 
-    <div className="progress-container">
+        {
+            title:"Upload",
+            path:"/upload"
+        },
 
-      {steps.map((step,index)=>(
+        {
+            title:"Target",
+            path:"/career-target"
+        },
 
-        <div
-          key={index}
-          className={`progress-step ${
-            current===index
-            ? "active"
-            : current>index
-            ? "completed"
-            : ""
-          }`}
-        >
+        {
+            title:"ATS",
+            path:"/ats-report"
+        },
 
-          <div className="progress-icon">
+        {
+            title:"Roadmap",
+            path:"/roadmap"
+        },
 
-            {step.icon}
+        {
+            title:"Interview",
+            path:"/interview"
+        },
 
-          </div>
+        {
+            title:"Report",
+            path:"/final-report"
+        }
 
-          <p>{step.label}</p>
+    ];
+
+    return(
+
+        <div className="progress-wrapper">
+
+            {
+
+                steps.map((step,index)=>(
+
+                    <div
+                        key={index}
+                        className="progress-step-wrapper"
+                    >
+
+                        <div
+
+                            className={
+
+                                index<current
+                                ?
+
+                                "progress-step done"
+
+                                :
+
+                                index===current
+
+                                ?
+
+                                "progress-step active"
+
+                                :
+
+                                "progress-step"
+
+                            }
+
+                            onClick={()=>{
+
+                                if(index<=current){
+
+                                    navigate(step.path);
+
+                                }
+
+                            }}
+
+                            style={{
+
+                                cursor:index<=current
+
+                                ?
+
+                                "pointer"
+
+                                :
+
+                                "not-allowed"
+
+                            }}
+
+                        >
+
+                            {
+
+                                index+1
+
+                            }
+
+                        </div>
+
+                        <span>
+
+                            {step.title}
+
+                        </span>
+
+                        {
+
+                            index!==steps.length-1 && (
+
+                                <div
+
+                                    className={
+
+                                        index<current
+
+                                        ?
+
+                                        "progress-line done"
+
+                                        :
+
+                                        "progress-line"
+
+                                    }
+
+                                />
+
+                            )
+
+                        }
+
+                    </div>
+
+                ))
+
+            }
 
         </div>
 
-      ))}
-
-    </div>
-
-  );
+    );
 
 }
 

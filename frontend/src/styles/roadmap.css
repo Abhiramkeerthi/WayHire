@@ -1,0 +1,851 @@
+/* =========================
+   ROADMAP PAGE
+========================= */
+
+.roadmap-page{
+
+    max-width:1200px;
+
+    margin:50px auto;
+
+    padding:20px;
+
+}
+
+/* =========================
+   HERO
+========================= */
+
+.roadmap-hero{
+
+    margin-bottom:35px;
+
+}
+
+.roadmap-title{
+
+    text-align:center;
+
+    margin-bottom:35px;
+
+}
+
+.roadmap-title h1{
+
+    font-size:56px;
+
+    font-weight:800;
+
+    color:#111827;
+
+    margin-bottom:12px;
+
+}
+
+.roadmap-title p{
+
+    font-size:21px;
+
+    color:#6B7280;
+
+    max-width:700px;
+
+    margin:auto;
+
+    line-height:1.7;
+
+}
+
+/* =========================
+   SUMMARY
+========================= */
+
+.roadmap-summary{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:22px;
+
+}
+
+.summary-box{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:25px;
+
+    display:flex;
+
+    gap:18px;
+
+    align-items:center;
+
+    border:1px solid #E5E7EB;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.05);
+
+    transition:.3s;
+
+}
+
+.summary-box:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 18px 40px rgba(79,70,229,.15);
+
+}
+
+.summary-box svg{
+
+    color:#4F46E5;
+
+}
+
+.summary-box span{
+
+    display:block;
+
+    color:#6B7280;
+
+    font-size:14px;
+
+}
+
+.summary-box h3{
+
+    margin-top:6px;
+
+    font-size:20px;
+
+    color:#111827;
+
+}
+
+/* =========================
+   COMMON SECTION TITLE
+========================= */
+
+.section-heading{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-bottom:22px;
+
+}
+
+.section-heading svg{
+
+    color:#4F46E5;
+
+}
+
+.section-heading h2{
+
+    font-size:34px;
+
+    color:#111827;
+
+}
+
+/* =========================
+   PRIORITY CARD
+========================= */
+
+.priority-card{
+
+    margin-top:40px;
+
+    background:white;
+
+    border-radius:24px;
+
+    padding:35px;
+
+    border:1px solid #E5E7EB;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.05);
+
+}
+
+.priority-card>p{
+
+    color:#6B7280;
+
+    margin-bottom:28px;
+
+    line-height:1.7;
+
+}
+
+.priority-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:20px;
+
+}
+
+.priority-item{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:#F8FAFC;
+
+    border-radius:18px;
+
+    padding:22px;
+
+    transition:.3s;
+
+}
+
+.priority-item:hover{
+
+    transform:translateY(-5px);
+
+    background:#EEF2FF;
+
+}
+
+.priority-item h3{
+
+    margin:0;
+
+    color:#111827;
+
+}
+
+.priority-item span{
+
+    color:#6B7280;
+
+}
+
+.priority-right{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+}
+
+.stars{
+
+    display:flex;
+
+    gap:5px;
+
+    color:#F59E0B;
+
+}
+
+.priority-right svg:last-child{
+
+    color:#4F46E5;
+
+}
+/* =========================
+   WEEKLY ROADMAP
+========================= */
+
+.roadmap-section{
+
+    margin-top:40px;
+
+    background:white;
+
+    border-radius:24px;
+
+    padding:35px;
+
+    border:1px solid #E5E7EB;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.05);
+
+}
+
+.week-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:25px;
+
+    margin-top:30px;
+
+}
+
+.week-card{
+
+    background:#F8FAFC;
+
+    border-radius:20px;
+
+    padding:28px;
+
+    border:1px solid #E5E7EB;
+
+    transition:.35s;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.week-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:6px;
+
+    height:100%;
+
+    background:linear-gradient(
+        #4F46E5,
+        #7C3AED
+    );
+
+}
+
+.week-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 20px 45px rgba(79,70,229,.12);
+
+}
+
+.week-tag{
+
+    display:inline-block;
+
+    background:#EEF2FF;
+
+    color:#4F46E5;
+
+    font-weight:700;
+
+    padding:8px 16px;
+
+    border-radius:999px;
+
+    margin-bottom:16px;
+
+    font-size:14px;
+
+}
+
+.week-card h3{
+
+    margin:0 0 18px;
+
+    font-size:25px;
+
+    color:#111827;
+
+}
+
+.week-info{
+
+    display:flex;
+
+    gap:18px;
+
+    margin-bottom:22px;
+
+}
+
+.week-info div{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    color:#6B7280;
+
+    font-size:15px;
+
+}
+
+.week-info svg{
+
+    color:#4F46E5;
+
+}
+
+.task-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:14px;
+
+}
+
+.task-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    color:#374151;
+
+}
+
+.task-item svg{
+
+    color:#22C55E;
+
+}
+
+/* =========================
+   RESOURCES
+========================= */
+
+.resources-section{
+
+    margin-top:40px;
+
+    background:white;
+
+    border-radius:24px;
+
+    padding:35px;
+
+    border:1px solid #E5E7EB;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.05);
+
+}
+
+.resources-section>p{
+
+    color:#6B7280;
+
+    margin-bottom:30px;
+
+    line-height:1.7;
+
+}
+
+.resources-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:25px;
+
+}
+
+.resource-card{
+
+    background:#F8FAFC;
+
+    border-radius:20px;
+
+    padding:28px;
+
+    transition:.35s;
+
+    border:1px solid #E5E7EB;
+
+}
+
+.resource-card:hover{
+
+    transform:translateY(-8px);
+
+    background:white;
+
+    box-shadow:0 18px 40px rgba(79,70,229,.12);
+
+}
+
+.resource-icon{
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:16px;
+
+    background:#EEF2FF;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:#4F46E5;
+
+    margin-bottom:18px;
+
+}
+
+.resource-card h3{
+
+    margin-bottom:12px;
+
+    color:#111827;
+
+    font-size:24px;
+
+}
+
+.resource-card p{
+
+    color:#6B7280;
+
+    line-height:1.7;
+
+    margin-bottom:24px;
+
+}
+
+.resource-btn{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    background:linear-gradient(
+        135deg,
+        #4F46E5,
+        #7C3AED
+    );
+
+    color:white;
+
+    border:none;
+
+    padding:14px 24px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.resource-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 12px 28px rgba(79,70,229,.25);
+
+}
+/* =========================
+   AI COACH
+========================= */
+
+.coach-card{
+
+    margin-top:40px;
+
+    background:linear-gradient(135deg,#EEF2FF,#F8FAFC);
+
+    border-radius:24px;
+
+    padding:40px;
+
+    border:1px solid #D8DDFD;
+
+    box-shadow:0 20px 45px rgba(79,70,229,.08);
+
+}
+
+.coach-title{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-bottom:20px;
+
+}
+
+.coach-title svg{
+
+    color:#4F46E5;
+
+}
+
+.coach-title h2{
+
+    margin:0;
+
+    color:#111827;
+
+    font-size:32px;
+
+}
+
+.coach-card>p{
+
+    color:#4B5563;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    margin-bottom:25px;
+
+}
+
+.coach-card ul{
+
+    margin:0;
+
+    padding-left:20px;
+
+}
+
+.coach-card li{
+
+    margin-bottom:14px;
+
+    color:#374151;
+
+    font-size:17px;
+
+    line-height:1.7;
+
+}
+
+.coach-footer{
+
+    margin-top:35px;
+
+    padding-top:25px;
+
+    border-top:1px solid #D1D5DB;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.coach-footer span{
+
+    color:#6B7280;
+
+    font-size:16px;
+
+}
+
+.coach-footer h3{
+
+    color:#16A34A;
+
+    font-size:30px;
+
+    margin:0;
+
+    font-weight:800;
+
+}
+
+/* =========================
+   CONTINUE BUTTON
+========================= */
+
+.roadmap-bottom{
+
+    display:flex;
+
+    justify-content:center;
+
+    margin:50px 0;
+
+}
+
+.continue-interview{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:12px;
+
+    text-decoration:none;
+
+    background:linear-gradient(
+        135deg,
+        #4F46E5,
+        #7C3AED
+    );
+
+    color:white;
+
+    padding:18px 38px;
+
+    border-radius:16px;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    transition:.3s;
+
+    box-shadow:0 18px 40px rgba(79,70,229,.25);
+
+}
+
+.continue-interview:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 22px 45px rgba(79,70,229,.35);
+
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:1000px){
+
+.roadmap-summary{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.priority-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.week-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.resources-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.roadmap-title h1{
+
+font-size:42px;
+
+}
+
+.roadmap-title p{
+
+font-size:18px;
+
+}
+
+.roadmap-summary{
+
+grid-template-columns:1fr;
+
+}
+
+.summary-box{
+
+padding:20px;
+
+}
+
+.section-heading h2{
+
+font-size:28px;
+
+}
+
+.coach-footer{
+
+flex-direction:column;
+
+gap:12px;
+
+text-align:center;
+
+}
+
+.continue-interview{
+
+width:100%;
+
+}
+
+}
+
+@media(max-width:500px){
+
+.priority-card,
+.roadmap-section,
+.resources-section,
+.coach-card{
+
+padding:24px;
+
+}
+
+.week-card{
+
+padding:22px;
+
+}
+
+.resource-card{
+
+padding:22px;
+
+}
+
+}

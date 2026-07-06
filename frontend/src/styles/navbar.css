@@ -159,3 +159,18 @@
     box-shadow:0 22px 45px rgba(79,70,229,.30);
 
 }
+.logo-link{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+.logo{
+
+    display:flex;
+
+    flex-direction:column;
+
+}

@@ -1,0 +1,190 @@
+.target-page{
+
+    max-width:900px;
+
+    margin:50px auto;
+
+    padding:20px;
+
+}
+
+.target-page h1{
+
+    font-size:54px;
+
+    text-align:center;
+
+    font-weight:800;
+
+    color:#111827;
+
+    margin-bottom:15px;
+
+}
+
+.target-page>p{
+
+    text-align:center;
+
+    font-size:20px;
+
+    color:#6B7280;
+
+    margin-bottom:45px;
+
+}
+
+.target-card{
+
+    background:white;
+
+    border:1px solid #E5E7EB;
+
+    border-radius:24px;
+
+    padding:40px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.05);
+
+}
+
+.input-group{
+
+    margin-bottom:30px;
+
+}
+
+.input-group label{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    font-weight:700;
+
+    color:#111827;
+
+    margin-bottom:12px;
+
+}
+
+.input-group svg{
+
+    color:#4F46E5;
+
+}
+
+.input-group input{
+
+    width:100%;
+
+    padding:18px 20px;
+
+    border:1px solid #D1D5DB;
+
+    border-radius:14px;
+
+    font-size:17px;
+
+    transition:.3s;
+
+    outline:none;
+
+}
+
+.input-group textarea{
+
+    width:100%;
+
+    padding:18px 20px;
+
+    border:1px solid #D1D5DB;
+
+    border-radius:14px;
+
+    font-size:16px;
+
+    resize:vertical;
+
+    min-height:180px;
+
+    outline:none;
+
+    transition:.3s;
+
+    font-family:inherit;
+
+}
+
+.input-group input:focus,
+.input-group textarea:focus{
+
+    border-color:#4F46E5;
+
+    box-shadow:0 0 0 4px rgba(79,70,229,.12);
+
+}
+
+.analyze-btn{
+
+    margin-top:15px;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    text-decoration:none;
+
+    background:linear-gradient(
+        135deg,
+        #4F46E5,
+        #7C3AED
+    );
+
+    color:white;
+
+    padding:18px 34px;
+
+    border-radius:14px;
+
+    font-size:17px;
+
+    font-weight:700;
+
+    transition:.3s;
+
+}
+
+.analyze-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 15px 35px rgba(79,70,229,.22);
+
+}
+
+@media(max-width:768px){
+
+.target-page h1{
+
+font-size:40px;
+
+}
+
+.target-page>p{
+
+font-size:17px;
+
+}
+
+.target-card{
+
+padding:25px;
+
+}
+
+}

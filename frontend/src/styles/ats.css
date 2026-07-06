@@ -1,0 +1,678 @@
+.ats-page{
+
+    max-width:1100px;
+
+    margin:50px auto;
+
+    padding:20px;
+
+}
+
+.ats-header{
+
+    text-align:center;
+
+    margin-bottom:45px;
+
+}
+
+.ats-header h1{
+
+    font-size:54px;
+
+    font-weight:800;
+
+    color:#111827;
+
+    margin-bottom:12px;
+
+}
+
+.ats-header p{
+
+    font-size:20px;
+
+    color:#6B7280;
+
+}
+
+/* ================= SCORE ================= */
+
+.score-card{
+
+    background:white;
+
+    border-radius:22px;
+
+    padding:45px;
+
+    text-align:center;
+
+    border:1px solid #E5E7EB;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.05);
+
+    margin-bottom:35px;
+
+}
+
+.score-card h2{
+
+    margin-bottom:30px;
+
+    color:#111827;
+
+}
+
+.score-circle{
+
+    width:190px;
+
+    height:190px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    background:
+    conic-gradient(
+    #4F46E5 0deg,
+    #7C3AED 313deg,
+    #E5E7EB 313deg
+    );
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    position:relative;
+
+}
+
+.score-circle::before{
+
+    content:"";
+
+    width:145px;
+
+    height:145px;
+
+    background:white;
+
+    border-radius:50%;
+
+    position:absolute;
+
+}
+
+.score-circle span{
+
+    position:relative;
+
+    z-index:2;
+
+    font-size:52px;
+
+    font-weight:800;
+
+    color:#111827;
+
+}
+
+.score-card p{
+
+    margin-top:30px;
+
+    color:#6B7280;
+
+    font-size:18px;
+
+    max-width:650px;
+
+    margin-inline:auto;
+
+}
+
+/* ================= KEYWORDS ================= */
+
+.keywords-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:25px;
+
+    margin-bottom:35px;
+
+}
+
+.keyword-card{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:30px;
+
+    border:1px solid #E5E7EB;
+
+}
+
+.keyword-card h2{
+
+    margin-bottom:20px;
+
+}
+
+.keyword-list{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:14px;
+
+}
+
+.keyword{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:10px 18px;
+
+    border-radius:999px;
+
+    font-weight:600;
+
+}
+
+.success{
+
+    background:#DCFCE7;
+
+    color:#15803D;
+
+}
+
+.danger{
+
+    background:#FEE2E2;
+
+    color:#DC2626;
+
+}
+
+/* ================= BREAKDOWN ================= */
+
+.breakdown-card{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:35px;
+
+    border:1px solid #E5E7EB;
+
+    margin-bottom:35px;
+
+}
+
+.breakdown-card h2{
+
+    margin-bottom:25px;
+
+}
+
+.breakdown-row{
+
+    margin-bottom:25px;
+
+}
+
+.breakdown-top{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin-bottom:10px;
+
+    font-weight:600;
+
+}
+
+.progress-track{
+
+    height:12px;
+
+    border-radius:999px;
+
+    background:#E5E7EB;
+
+    overflow:hidden;
+
+}
+
+.progress-value{
+
+    height:100%;
+
+    border-radius:999px;
+
+    background:linear-gradient(
+        90deg,
+        #4F46E5,
+        #7C3AED
+    );
+
+}
+
+/* ================= SUGGESTIONS ================= */
+
+.suggestions-card{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:35px;
+
+    border:1px solid #E5E7EB;
+
+}
+
+.suggestions-card h2{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin-bottom:30px;
+
+}
+
+.suggestion{
+
+    display:flex;
+
+    gap:15px;
+
+    margin-bottom:18px;
+
+    align-items:flex-start;
+
+}
+
+.bullet{
+
+    color:#4F46E5;
+
+    font-size:22px;
+
+    font-weight:bold;
+
+}
+
+.roadmap-btn{
+
+    margin-top:35px;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    text-decoration:none;
+
+    background:linear-gradient(
+        135deg,
+        #4F46E5,
+        #7C3AED
+    );
+
+    color:white;
+
+    padding:16px 34px;
+
+    border-radius:14px;
+
+    font-size:17px;
+
+    font-weight:700;
+
+    transition:.3s;
+
+}
+
+.roadmap-btn:hover{
+
+    transform:translateY(-3px);
+
+}
+
+@media(max-width:900px){
+
+.keywords-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.score-circle{
+
+width:150px;
+
+height:150px;
+
+}
+
+.score-circle::before{
+
+width:115px;
+
+height:115px;
+
+}
+
+.score-circle span{
+
+font-size:42px;
+
+}
+
+}
+/* ================= ANALYSIS TARGET ================= */
+
+.analysis-target{
+
+    background:white;
+
+    border:1px solid #E5E7EB;
+
+    border-radius:22px;
+
+    padding:35px;
+
+    margin-bottom:35px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.05);
+
+}
+
+.analysis-header{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-bottom:30px;
+
+}
+
+.analysis-header svg{
+
+    color:#4F46E5;
+
+}
+
+.analysis-header h2{
+
+    margin:0;
+
+    font-size:28px;
+
+    color:#111827;
+
+}
+
+.analysis-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:20px;
+
+}
+
+.analysis-item{
+
+    display:flex;
+
+    gap:15px;
+
+    align-items:flex-start;
+
+    padding:20px;
+
+    background:#F8FAFC;
+
+    border-radius:16px;
+
+    border:1px solid #E5E7EB;
+
+}
+
+.analysis-item svg{
+
+    color:#4F46E5;
+
+    margin-top:3px;
+
+}
+
+.analysis-item span{
+
+    display:block;
+
+    font-size:14px;
+
+    color:#6B7280;
+
+    margin-bottom:6px;
+
+}
+
+.analysis-item h3{
+
+    margin:0;
+
+    color:#111827;
+
+    font-size:18px;
+
+}
+
+/* ================= AI SUMMARY ================= */
+
+.summary-card{
+
+    display:flex;
+
+    gap:20px;
+
+    align-items:flex-start;
+
+    background:#EEF2FF;
+
+    border-radius:18px;
+
+    padding:25px;
+
+    margin-bottom:35px;
+
+    text-align:left;
+
+}
+
+.summary-card svg{
+
+    color:#4F46E5;
+
+    flex-shrink:0;
+
+}
+
+.summary-card h3{
+
+    margin:0 0 10px;
+
+    font-size:24px;
+
+}
+
+.summary-card p{
+
+    margin:0;
+
+    color:#6B7280;
+
+    line-height:1.7;
+
+}
+
+/* ================= READINESS ================= */
+
+.readiness-badge{
+
+    display:inline-block;
+
+    margin-top:28px;
+
+    padding:12px 22px;
+
+    background:#EEF2FF;
+
+    border-radius:999px;
+
+    color:#4F46E5;
+
+    font-weight:700;
+
+    font-size:16px;
+
+}
+
+/* ================= ACTION BUTTONS ================= */
+
+.score-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+
+    margin-top:35px;
+
+}
+
+.improve-btn{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    background:#F3F4F6;
+
+    border:none;
+
+    padding:16px 28px;
+
+    border-radius:14px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.improve-btn:hover{
+
+    background:#E5E7EB;
+
+}
+
+.continue-roadmap{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    text-decoration:none;
+
+    background:linear-gradient(135deg,#4F46E5,#7C3AED);
+
+    color:white;
+
+    padding:16px 30px;
+
+    border-radius:14px;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    transition:.3s;
+
+}
+
+.continue-roadmap:hover{
+
+    transform:translateY(-3px);
+
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:900px){
+
+.analysis-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.summary-card{
+
+flex-direction:column;
+
+}
+
+.score-buttons{
+
+flex-direction:column;
+
+}
+
+.improve-btn,
+.continue-roadmap{
+
+justify-content:center;
+
+}
+
+}

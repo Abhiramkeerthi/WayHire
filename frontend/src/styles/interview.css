@@ -1,0 +1,1254 @@
+/* ===========================================
+   INTERVIEW PAGE
+=========================================== */
+
+.interview-page{
+
+    max-width:1200px;
+
+    margin:50px auto;
+
+    padding:20px;
+
+}
+
+/* ===========================================
+   HERO
+=========================================== */
+
+.interview-hero{
+
+    text-align:center;
+
+    margin-bottom:50px;
+
+}
+
+.interview-hero h1{
+
+    font-size:58px;
+
+    font-weight:800;
+
+    color:#111827;
+
+    margin-bottom:15px;
+
+}
+
+.interview-hero p{
+
+    max-width:720px;
+
+    margin:auto;
+
+    color:#6B7280;
+
+    line-height:1.8;
+
+    font-size:20px;
+
+}
+
+.interview-summary{
+
+    margin-top:45px;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:24px;
+
+}
+
+.summary-box{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:26px;
+
+    display:flex;
+
+    gap:18px;
+
+    align-items:center;
+
+    border:1px solid #E5E7EB;
+
+    transition:.3s;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.05);
+
+}
+
+.summary-box:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 18px 45px rgba(79,70,229,.12);
+
+}
+
+.summary-box svg{
+
+    color:#4F46E5;
+
+}
+
+.summary-box span{
+
+    display:block;
+
+    color:#6B7280;
+
+    font-size:14px;
+
+}
+
+.summary-box h3{
+
+    margin-top:6px;
+
+    color:#111827;
+
+    font-size:21px;
+
+}
+
+/* ===========================================
+   INTERVIEW SESSION
+=========================================== */
+
+.interview-session{
+
+    background:white;
+
+    border-radius:28px;
+
+    padding:45px;
+
+    border:1px solid #E5E7EB;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.06);
+
+}
+
+.session-top{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:22px;
+
+    margin-bottom:35px;
+
+}
+
+.session-avatar{
+
+    width:90px;
+
+    height:90px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:linear-gradient(
+        135deg,
+        #4F46E5,
+        #7C3AED
+    );
+
+    color:white;
+
+    box-shadow:0 15px 35px rgba(79,70,229,.25);
+
+}
+
+.session-top h2{
+
+    font-size:34px;
+
+    color:#111827;
+
+    margin-bottom:5px;
+
+}
+
+.session-top span{
+
+    color:#6B7280;
+
+    font-size:17px;
+
+}
+
+.session-message{
+
+    background:#EEF2FF;
+
+    border-radius:18px;
+
+    padding:28px;
+
+    line-height:1.9;
+
+    color:#374151;
+
+    font-size:18px;
+
+}
+
+.session-button{
+
+    margin-top:35px;
+
+    width:100%;
+
+    border:none;
+
+    border-radius:16px;
+
+    padding:20px;
+
+    background:linear-gradient(
+        135deg,
+        #4F46E5,
+        #7C3AED
+    );
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.session-button:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 18px 35px rgba(79,70,229,.25);
+
+}
+/* ===========================================
+   LIVE INTERVIEW
+=========================================== */
+
+.live-session{
+
+    margin-top:35px;
+
+}
+
+.session-status{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin:35px 0;
+
+    color:#4F46E5;
+
+    font-size:24px;
+
+    font-weight:700;
+
+}
+
+.question-bubble{
+
+    background:#F8FAFC;
+
+    border-left:6px solid #4F46E5;
+
+    border-radius:20px;
+
+    padding:30px;
+
+    font-size:26px;
+
+    font-weight:700;
+
+    color:#111827;
+
+    line-height:1.7;
+
+    margin-bottom:35px;
+
+}
+
+/* ===========================================
+   MICROPHONE
+=========================================== */
+
+.mic-card{
+
+    background:#FAFAFA;
+
+    border:2px dashed #D1D5DB;
+
+    border-radius:22px;
+
+    padding:35px;
+
+    text-align:center;
+
+    margin-bottom:35px;
+
+}
+
+.mic-button{
+
+    width:95px;
+
+    height:95px;
+
+    border-radius:50%;
+
+    border:none;
+
+    background:linear-gradient(
+        135deg,
+        #4F46E5,
+        #7C3AED
+    );
+
+    color:white;
+
+    cursor:pointer;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin:auto;
+
+    transition:.3s;
+
+}
+
+.mic-button:hover{
+
+    transform:scale(1.08);
+
+}
+
+.recording{
+
+    animation:pulse 1.4s infinite;
+
+}
+
+@keyframes pulse{
+
+0%{
+
+box-shadow:0 0 0 0 rgba(79,70,229,.5);
+
+}
+
+70%{
+
+box-shadow:0 0 0 25px rgba(79,70,229,0);
+
+}
+
+100%{
+
+box-shadow:0 0 0 0 rgba(79,70,229,0);
+
+}
+
+}
+
+.mic-card h3{
+
+    margin-top:22px;
+
+    color:#111827;
+
+}
+
+.timer{
+
+    margin-top:10px;
+
+    font-size:28px;
+
+    font-weight:800;
+
+    color:#4F46E5;
+
+}
+
+/* ===========================================
+   VOICE WAVE
+=========================================== */
+
+.voice-wave{
+
+    margin:35px auto;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-end;
+
+    gap:8px;
+
+    height:90px;
+
+}
+
+.voice-wave div{
+
+    width:10px;
+
+    background:#4F46E5;
+
+    border-radius:999px;
+
+    animation:wave 1s infinite ease-in-out;
+
+}
+
+.voice-wave div:nth-child(1){
+
+height:25px;
+
+}
+
+.voice-wave div:nth-child(2){
+
+height:60px;
+
+animation-delay:.2s;
+
+}
+
+.voice-wave div:nth-child(3){
+
+height:80px;
+
+animation-delay:.4s;
+
+}
+
+.voice-wave div:nth-child(4){
+
+height:55px;
+
+animation-delay:.6s;
+
+}
+
+.voice-wave div:nth-child(5){
+
+height:30px;
+
+animation-delay:.8s;
+
+}
+
+@keyframes wave{
+
+0%{
+
+transform:scaleY(.5);
+
+}
+
+50%{
+
+transform:scaleY(1.3);
+
+}
+
+100%{
+
+transform:scaleY(.5);
+
+}
+
+}
+
+/* ===========================================
+   LIVE TRANSCRIPT
+=========================================== */
+
+.transcript-card{
+
+    background:white;
+
+    border-radius:20px;
+
+    border:1px solid #E5E7EB;
+
+    padding:28px;
+
+    margin-top:35px;
+
+}
+
+.transcript-card h3{
+
+    margin-bottom:18px;
+
+    color:#111827;
+
+}
+
+.transcript{
+
+    background:#F8FAFC;
+
+    border-radius:14px;
+
+    padding:22px;
+
+    line-height:1.9;
+
+    color:#374151;
+
+    min-height:120px;
+
+}
+/* ===========================================
+   AI THINKING
+=========================================== */
+
+.ai-thinking{
+
+    margin-top:35px;
+
+    background:linear-gradient(
+        135deg,
+        #EEF2FF,
+        #F8FAFC
+    );
+
+    border-radius:22px;
+
+    padding:30px;
+
+    text-align:center;
+
+    border:1px solid #D8DDFD;
+
+}
+
+.ai-thinking h3{
+
+    color:#111827;
+
+    margin-bottom:12px;
+
+    font-size:24px;
+
+}
+
+.ai-thinking p{
+
+    color:#6B7280;
+
+    line-height:1.8;
+
+}
+
+.thinking-loader{
+
+    width:70px;
+
+    height:70px;
+
+    margin:25px auto;
+
+    border-radius:50%;
+
+    border:5px solid #E5E7EB;
+
+    border-top:5px solid #4F46E5;
+
+    animation:spin 1s linear infinite;
+
+}
+
+@keyframes spin{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+/* ===========================================
+   LIVE FEEDBACK
+=========================================== */
+
+.feedback-card{
+
+    margin-top:35px;
+
+    background:white;
+
+    border-radius:22px;
+
+    padding:35px;
+
+    border:1px solid #E5E7EB;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.05);
+
+}
+
+.feedback-card h2{
+
+    margin-bottom:25px;
+
+    color:#111827;
+
+}
+
+.feedback-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:20px;
+
+}
+
+.feedback-item{
+
+    background:#F8FAFC;
+
+    border-radius:18px;
+
+    padding:22px;
+
+}
+
+.feedback-item h4{
+
+    margin-bottom:10px;
+
+    color:#111827;
+
+}
+
+.feedback-score{
+
+    color:#4F46E5;
+
+    font-size:24px;
+
+    font-weight:800;
+
+}
+
+/* ===========================================
+   NEXT QUESTION
+=========================================== */
+
+.next-question{
+
+    margin-top:40px;
+
+    width:100%;
+
+    padding:20px;
+
+    border:none;
+
+    border-radius:16px;
+
+    background:linear-gradient(
+        135deg,
+        #4F46E5,
+        #7C3AED
+    );
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    transition:.3s;
+
+}
+
+.next-question:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 18px 35px rgba(79,70,229,.25);
+
+}
+
+/* ===========================================
+   INTERVIEW COMPLETE
+=========================================== */
+
+.interview-complete{
+
+    margin-top:45px;
+
+    background:linear-gradient(
+        135deg,
+        #ECFDF5,
+        #F0FDF4
+    );
+
+    border-radius:24px;
+
+    padding:35px;
+
+    text-align:center;
+
+    border:1px solid #BBF7D0;
+
+}
+
+.interview-complete h2{
+
+    color:#166534;
+
+    margin-bottom:15px;
+
+}
+
+.interview-complete p{
+
+    color:#166534;
+
+    line-height:1.8;
+
+    max-width:650px;
+
+    margin:auto;
+
+}
+
+/* ===========================================
+   FOOTER
+=========================================== */
+
+.interview-footer{
+
+    margin:50px 0;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+.finish-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    text-decoration:none;
+
+    background:linear-gradient(
+        135deg,
+        #4F46E5,
+        #7C3AED
+    );
+
+    color:white;
+
+    padding:18px 36px;
+
+    border-radius:16px;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    transition:.3s;
+
+}
+
+.finish-btn:hover{
+
+    transform:translateY(-4px);
+
+}
+
+/* ===========================================
+   RESPONSIVE
+=========================================== */
+
+@media(max-width:1000px){
+
+.interview-summary{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.feedback-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.interview-summary{
+
+grid-template-columns:1fr;
+
+}
+
+.session-top{
+
+flex-direction:column;
+
+text-align:center;
+
+}
+
+.question-bubble{
+
+font-size:22px;
+
+}
+
+.interview-hero h1{
+
+font-size:42px;
+
+}
+
+.interview-hero p{
+
+font-size:18px;
+
+}
+
+}
+
+@media(max-width:500px){
+
+.interview-session{
+
+padding:25px;
+
+}
+
+.voice-message,
+
+.session-message,
+
+.question-bubble{
+
+padding:20px;
+
+}
+
+.mic-button{
+
+width:75px;
+
+height:75px;
+
+}
+
+.timer{
+
+font-size:22px;
+
+}
+
+}
+/* ===========================================
+   INTERVIEW SESSION
+=========================================== */
+
+.session-card{
+
+    margin-top:50px;
+
+    background:white;
+
+    border-radius:28px;
+
+    padding:45px;
+
+    border:1px solid #E5E7EB;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.06);
+
+}
+
+.session-header{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:22px;
+
+    margin-bottom:35px;
+
+}
+
+.session-avatar{
+
+    width:90px;
+
+    height:90px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:linear-gradient(
+        135deg,
+        #4F46E5,
+        #7C3AED
+    );
+
+    color:white;
+
+    box-shadow:0 15px 35px rgba(79,70,229,.25);
+
+}
+
+.session-header h2{
+
+    font-size:34px;
+
+    margin:0;
+
+    color:#111827;
+
+}
+
+.session-header span{
+
+    color:#6B7280;
+
+    font-size:17px;
+
+}
+
+.session-box{
+
+    margin-top:20px;
+
+    background:#EEF2FF;
+
+    border-radius:18px;
+
+    padding:28px;
+
+    color:#374151;
+
+    font-size:18px;
+
+    line-height:1.9;
+
+}
+
+.session-btn{
+
+    margin-top:35px;
+
+    width:100%;
+
+    border:none;
+
+    border-radius:16px;
+
+    padding:20px;
+
+    background:linear-gradient(
+        135deg,
+        #4F46E5,
+        #7C3AED
+    );
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:12px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.session-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 15px 35px rgba(79,70,229,.25);
+
+}
+
+/* ===========================================
+   LIVE STATES
+=========================================== */
+
+.status{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin:35px 0;
+
+    color:#4F46E5;
+
+    font-size:22px;
+
+    font-weight:700;
+
+}
+
+.question-box{
+
+    background:#F8FAFC;
+
+    border-left:6px solid #4F46E5;
+
+    border-radius:18px;
+
+    padding:30px;
+
+    font-size:28px;
+
+    font-weight:700;
+
+    color:#111827;
+
+    line-height:1.7;
+
+}
+
+.thinking-box{
+
+    margin-top:30px;
+
+    background:#EEF2FF;
+
+    border-radius:18px;
+
+    padding:28px;
+
+    text-align:center;
+
+    color:#374151;
+
+    font-size:18px;
+
+}
+
+/* ===========================================
+   VOICE ANIMATION
+=========================================== */
+
+.voice-wave{
+
+    margin:45px auto;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-end;
+
+    gap:8px;
+
+    height:90px;
+
+}
+
+.voice-wave div{
+
+    width:10px;
+
+    background:#4F46E5;
+
+    border-radius:999px;
+
+    animation:wave 1s infinite ease-in-out;
+
+}
+
+.voice-wave div:nth-child(1){
+
+    height:25px;
+
+}
+
+.voice-wave div:nth-child(2){
+
+    height:60px;
+
+    animation-delay:.15s;
+
+}
+
+.voice-wave div:nth-child(3){
+
+    height:85px;
+
+    animation-delay:.3s;
+
+}
+
+.voice-wave div:nth-child(4){
+
+    height:60px;
+
+    animation-delay:.45s;
+
+}
+
+.voice-wave div:nth-child(5){
+
+    height:25px;
+
+    animation-delay:.6s;
+
+}
+
+@keyframes wave{
+
+    0%{
+
+        transform:scaleY(.6);
+
+    }
+
+    50%{
+
+        transform:scaleY(1.3);
+
+    }
+
+    100%{
+
+        transform:scaleY(.6);
+
+    }
+
+}
+
+.spinner{
+
+    animation:spin 1s linear infinite;
+
+}
+
+@keyframes spin{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+/* ===========================================
+   RESPONSIVE
+=========================================== */
+
+@media(max-width:768px){
+
+.session-card{
+
+padding:25px;
+
+}
+
+.session-header{
+
+flex-direction:column;
+
+text-align:center;
+
+}
+
+.session-header h2{
+
+font-size:28px;
+
+}
+
+.question-box{
+
+font-size:22px;
+
+}
+
+}
