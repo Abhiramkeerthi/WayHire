@@ -1,122 +1,187 @@
 from collections import Counter
 
 
-TECH_KEYWORDS = {
-    "Python",
-    "Java",
-    "JavaScript",
-    "TypeScript",
-    "React",
-    "Angular",
-    "Vue",
-    "Node.js",
-    "Express",
-    "FastAPI",
-    "Flask",
-    "Django",
-    "Spring",
-    "C",
-    "C++",
-    "C#",
-    "Go",
-    "Rust",
-    "PHP",
-    "HTML",
-    "CSS",
-    "SQL",
-    "MongoDB",
-    "PostgreSQL",
-    "MySQL",
-    "Docker",
-    "Kubernetes",
-    "AWS",
-    "Azure",
-    "Firebase",
-    "TensorFlow",
-    "PyTorch"
+FRAMEWORKS = {
+
+    "FastAPI": [
+        "fastapi"
+    ],
+
+    "Flask": [
+        "flask"
+    ],
+
+    "Django": [
+        "django"
+    ],
+
+    "React": [
+        "react"
+    ],
+
+    "Next.js": [
+        "next"
+    ],
+
+    "Angular": [
+        "angular"
+    ],
+
+    "Vue": [
+        "vue"
+    ],
+
+    "Spring Boot": [
+        "spring"
+    ],
+
+    "TensorFlow": [
+        "tensorflow"
+    ],
+
+    "PyTorch": [
+        "torch"
+    ],
+
+    "Docker": [
+        "docker"
+    ],
+
+    "Kubernetes": [
+        "kubernetes",
+        "k8s"
+    ],
+
+    "MongoDB": [
+        "mongodb"
+    ],
+
+    "PostgreSQL": [
+        "postgresql",
+        "postgres"
+    ],
+
+    "MySQL": [
+        "mysql"
+    ]
 }
+
+
+def detect_frameworks(repositories):
+
+    detected = Counter()
+
+    for repo in repositories:
+
+        text = " ".join(
+
+            [
+
+                repo.get("name", ""),
+
+                repo.get("description") or "",
+
+                " ".join(repo.get("topics", []))
+
+            ]
+
+        ).lower()
+
+        for framework, keywords in FRAMEWORKS.items():
+
+            if any(
+
+                keyword in text
+
+                for keyword in keywords
+
+            ):
+
+                detected[framework] += 1
+
+    return dict(detected)
 
 
 def analyze_repositories(repositories):
 
+    if not repositories:
+
+        return {
+
+            "total_repositories": 0,
+
+            "frameworks": {},
+
+            "languages": {},
+
+            "original_projects": 0,
+
+            "forked_projects": 0,
+
+            "stars": 0,
+
+            "forks": 0
+
+        }
+
     languages = Counter()
-    topics = Counter()
 
-    total_stars = 0
-    total_forks = 0
+    original = 0
 
-    deployed_projects = 0
-    documented_projects = 0
+    forked = 0
 
-    detected_skills = set()
+    stars = 0
 
-    repo_summaries = []
+    forks = 0
 
     for repo in repositories:
 
-        language = repo.get("language")
+        if repo.get("language"):
 
-        if language:
-            languages[language] += 1
-            detected_skills.add(language)
+            languages[
 
-        total_stars += repo.get("stargazers_count", 0)
-        total_forks += repo.get("forks_count", 0)
+                repo["language"]
 
-        if repo.get("homepage"):
-            deployed_projects += 1
+            ] += 1
 
-        if repo.get("description"):
-            documented_projects += 1
+        if repo.get("fork"):
 
-            description = repo["description"]
+            forked += 1
 
-            for tech in TECH_KEYWORDS:
+        else:
 
-                if tech.lower() in description.lower():
-                    detected_skills.add(tech)
+            original += 1
 
-        for topic in repo.get("topics", []):
+        stars += repo.get(
 
-            topics[topic] += 1
+            "stargazers_count",
 
-            for tech in TECH_KEYWORDS:
+            0
 
-                if tech.lower() == topic.lower():
-                    detected_skills.add(tech)
+        )
 
-        repo_summaries.append({
+        forks += repo.get(
 
-            "name": repo.get("name"),
+            "forks_count",
 
-            "language": language,
+            0
 
-            "stars": repo.get("stargazers_count", 0),
-
-            "forks": repo.get("forks_count", 0),
-
-            "homepage": repo.get("homepage"),
-
-            "description": repo.get("description")
-
-        })
+        )
 
     return {
 
+        "total_repositories": len(repositories),
+
+        "frameworks": detect_frameworks(repositories),
+
         "languages": dict(languages),
 
-        "topics": dict(topics),
+        "original_projects": original,
 
-        "repositories": repo_summaries,
+        "forked_projects": forked,
 
-        "total_stars": total_stars,
+        "stars": stars,
 
-        "total_forks": total_forks,
-
-        "deployed_projects": deployed_projects,
-
-        "documented_projects": documented_projects,
-
-        "detected_skills": sorted(list(detected_skills))
+        "forks": forks
 
     }

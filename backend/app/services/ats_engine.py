@@ -1,11 +1,6 @@
-import re
-
-
 class ATSEngine:
 
     def calculate(self, profile, validation):
-
-        score = 100
 
         breakdown = {
             "formatting": 20,
@@ -23,7 +18,7 @@ class ATSEngine:
             breakdown["skills"] -= 10
             warnings.append("No skills section detected.")
 
-        if len(resume.get("projects", [])) == 0:
+        if not resume.get("projects"):
             breakdown["projects"] -= 10
             warnings.append("No projects detected.")
 
@@ -37,14 +32,10 @@ class ATSEngine:
                 len(validation["warnings"]) * 2
             )
 
-        score = sum(breakdown.values())
+        overall = sum(breakdown.values())
 
         return {
-
-            "overall_score": score,
-
+            "overall_score": overall,
             "breakdown": breakdown,
-
             "warnings": warnings
-
         }

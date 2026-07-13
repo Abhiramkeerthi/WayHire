@@ -1,5 +1,6 @@
 from collections import Counter
 
+from app.schemas.analyzer_result import AnalyzerResult
 from app.services.http_service import get_json
 from app.services.github_repository_service import analyze_repositories
 
@@ -22,14 +23,23 @@ class GitHubAnalyzer(BaseAnalyzer):
 
         if not profile:
 
-            return {
+            return AnalyzerResult(
 
-                "platform": "github",
+                platform="github",
 
-                "accessible": False,
+                accessible=False,
 
-                "facts": {}
-            }
+                score=0,
+
+                confidence=0,
+
+                facts={},
+
+                warnings=["GitHub profile not found."],
+
+                evidence=[]
+
+            )
 
         repos = get_json(
             f"https://api.github.com/users/{username}/repos"
@@ -45,23 +55,71 @@ class GitHubAnalyzer(BaseAnalyzer):
 
         for repo in repos:
 
-            repo_names.append(repo.get("name"))
+            repo_names.append(
+                repo.get("name")
+            )
 
             if repo.get("language"):
 
-                language_counter[repo["language"]] += 1
+                language_counter[
+                    repo["language"]
+                ] += 1
 
-            total_stars += repo.get("stargazers_count", 0)
+            total_stars += repo.get(
+                "stargazers_count",
+                0
+            )
 
-            total_forks += repo.get("forks_count", 0)
+            total_forks += repo.get(
+                "forks_count",
+                0
+            )
 
-        return {
+        warnings = []
 
-            "platform": "github",
+        if len(repos) == 0:
 
-            "accessible": True,
+            warnings.append(
+                "No public repositories found."
+            )
 
-            "facts": {
+        score = 100
+
+        score -= len(warnings) * 10
+
+        score = max(score, 0)
+
+        evidence = []
+
+        if repos:
+
+            evidence.append(
+                f"{len(repos)} public repositories"
+            )
+
+        if total_stars:
+
+            evidence.append(
+                f"{total_stars} GitHub stars"
+            )
+
+        if language_counter:
+
+            evidence.append(
+                "Languages detected"
+            )
+
+        return AnalyzerResult(
+
+            platform="github",
+
+            accessible=True,
+
+            score=score,
+
+            confidence=95,
+
+            facts={
 
                 "username": profile.get("login"),
 
@@ -88,6 +146,11 @@ class GitHubAnalyzer(BaseAnalyzer):
                 "total_stars": total_stars,
 
                 "total_forks": total_forks
-            }
 
-        }
+            },
+
+            warnings=warnings,
+
+            evidence=evidence
+
+        )

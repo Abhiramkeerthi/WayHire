@@ -1,7 +1,10 @@
 from app.services.analyzers.github import GitHubAnalyzer
+from app.services.analyzers.portfolio import PortfolioAnalyzer
 
-
-github = GitHubAnalyzer()
+ANALYZERS = [
+    GitHubAnalyzer(),
+    PortfolioAnalyzer(),
+]
 
 
 def analyze_links(links):
@@ -10,12 +13,26 @@ def analyze_links(links):
 
     for link in links:
 
-        if github.supports(link):
+        for analyzer in ANALYZERS:
 
-            results.append(
+            if analyzer.supports(link):
 
-                github.analyze(link)
+                try:
 
-            )
+                    results.append(
+                        analyzer.analyze(link)
+                    )
+
+                except Exception as e:
+
+                    results.append(
+                        {
+                            "platform": analyzer.__class__.__name__,
+                            "accessible": False,
+                            "error": str(e)
+                        }
+                    )
+
+                break
 
     return results
