@@ -18,4 +18,7 @@ build/
 Thumbs.db
 
 # VS Code
-.vscode/
+.vscode/backend/app/uploads/
+backend/.env
+__pycache__/
+*.pyc
